@@ -1,0 +1,26 @@
+<!doctype html><meta charset="utf-8"><title>Tab Vault</title><link rel="stylesheet" href="style.css">
+<div id="app">
+<aside id="side"><header><h1 class="brand"><img src="icons/icon32.png" alt="">Tab Vault</h1>
+<input id="q" type="search" placeholder="Search titles, URLs, tags ( / )">
+<div id="tabs"></div></header>
+<div id="list"></div>
+<div class="bar" style="padding:10px"><button class="pri" id="save">Save all windows</button><button id="imp">Import</button><button id="exp">Export all</button><button id="set">Settings</button>
+<input type="file" id="file" accept=".json" hidden></div></aside>
+<main id="detail"></main></div>
+<dialog id="dlg"><h3 style="margin-top:0">Settings</h3>
+<label>Auto-save every (minutes)<input type="number" id="s1" min="1"></label>
+<label>Auto-saves to keep<input type="number" id="s2" min="1"></label>
+<label>Closed windows to keep<input type="number" id="s3" min="1"></label>
+<label>Save windows when closed<input type="checkbox" id="s4"></label>
+<label>Restore lazily by default<input type="checkbox" id="s5"></label>
+<label>Store public IP address<input type="checkbox" id="s7"></label>
+<p class="mut" style="margin:-4px 0 8px;max-width:340px;font-size:12px">Off by default. When on, every saved session records your public IP, looked up through api64.ipify.org, a third-party service. It's used to warn you if a session is restored from a different network.</p>
+<label>Warn if browser, system or IP differs<input type="checkbox" id="s8"></label>
+<label>Theme<select id="s6"><option>auto</option><option>light</option><option>dark</option></select></label>
+<div class="bar" style="justify-content:flex-end"><button id="cx">Cancel</button><button class="pri" id="ok">Save settings</button></div></dialog>
+<dialog id="pw"><h3 id="pwt" style="margin-top:0"></h3>
+<label>Password<input type="password" id="p1" autocomplete="off"></label>
+<label id="p2row">Confirm<input type="password" id="p2" autocomplete="off"></label>
+<p id="pwh" class="mut" style="max-width:300px"></p><p id="pwe" style="color:var(--bad);margin:0"></p>
+<div class="bar" style="justify-content:flex-end"><button id="pwcx">Cancel</button><button class="pri" id="pwok">OK</button></div></dialog>
+<script src="lib.js"></script><script src="manager.js"></script>

@@ -1,0 +1,30 @@
+:root{color-scheme:light dark;--bg:light-dark(#f7f6f2,#15171b);--card:light-dark(#fff,#1e2127);--fg:light-dark(#1d2129,#e6e8ec);
+--mut:light-dark(#6b7280,#8b93a1);--bd:light-dark(#e2e0d8,#2c313a);--acc:light-dark(#1f6f5c,#4cc2a4);--acc-fg:light-dark(#fff,#0c1512);--bad:#c0392b}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 system-ui,sans-serif}
+button,input,select,textarea{font:inherit;color:inherit;background:var(--card);border:1px solid var(--bd);border-radius:6px;padding:6px 10px}
+button{cursor:pointer}button:hover{border-color:var(--acc)}button:focus-visible,input:focus-visible,.item:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+button.pri{background:var(--acc);color:var(--acc-fg);border-color:var(--acc)}button.danger{color:var(--bad)}
+.bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 10px}.bar input[type=text],.bar input:not([type]){flex:1;min-width:120px}
+.mut,small{color:var(--mut)}small{display:block;font-size:12px}.empty{color:var(--mut);padding:16px}
+.item{padding:9px 12px;border-radius:6px;cursor:pointer;border:1px solid transparent}.item:hover{background:var(--card)}
+.item.on{background:var(--card);border-color:var(--acc)}
+.brand{display:flex;align-items:center;gap:8px}.brand img{width:22px;height:22px;border-radius:5px}
+.popup{width:330px;padding:12px}.popup .brand{margin-bottom:10px;font-weight:600}.popup input{width:100%;margin-bottom:8px}.popup .bar button{flex:1}.popup .item{padding:6px 8px}
+#app{display:grid;grid-template-columns:320px 1fr;height:100vh}
+#side{border-right:1px solid var(--bd);display:flex;flex-direction:column;min-height:0}
+#side header{padding:14px;border-bottom:1px solid var(--bd)}#side h1{font-size:18px;margin:0 0 10px;letter-spacing:-.01em}
+#side header input{width:100%;margin-bottom:8px}#tabs{display:flex;gap:4px;flex-wrap:wrap}
+#tabs button{padding:3px 9px;border-radius:99px;font-size:12px}#tabs button.on{background:var(--acc);color:var(--acc-fg);border-color:var(--acc)}
+#list{overflow:auto;padding:8px;flex:1}#detail{overflow:auto;padding:20px 24px}
+#detail .bar input#nm{font-size:17px;font-weight:600}
+.win{margin:16px 0 6px;font-weight:600}.tab{display:flex;gap:8px;align-items:center;padding:4px 6px;border-radius:4px}
+.tab:hover{background:var(--card)}.tab img,.tab i{width:16px;height:16px;flex:none;border-radius:3px;background:var(--bd)}
+.tab a{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;cursor:pointer}.tab a:hover{color:var(--acc)}
+.tab small{display:inline;max-width:160px;overflow:hidden;text-overflow:ellipsis}.tab .x{border:0;background:none;padding:0 6px;color:var(--mut)}
+.chip{display:inline-block;padding:0 8px;margin:2px 4px 0 0;border:1px solid var(--bd);border-radius:99px;font-size:11px;cursor:pointer}
+dialog{background:var(--card);color:var(--fg);border:1px solid var(--bd);border-radius:10px;padding:20px;min-width:320px}
+dialog label{display:flex;justify-content:space-between;gap:12px;margin:10px 0}dialog input[type=number]{width:80px}
+@media(max-width:700px){#app{grid-template-columns:1fr;height:auto}}
+[hidden]{display:none!important}.lock{padding:16px;border:1px solid var(--bd);border-radius:8px;background:var(--card);margin-top:12px}
+.env{margin:0 0 10px;font-size:12px}.warn{border:1px solid var(--bad);border-radius:8px;padding:8px 12px;margin:0 0 10px;font-size:13px}
