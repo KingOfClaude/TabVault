@@ -141,4 +141,4 @@ Exports are JSON arrays of sessions. A session looks roughly like this:
 
 ## License
 
-Add a license of your choice (for example [MIT](https://choosealicense.com/licenses/mit/)).
+CC0-1.0 license
