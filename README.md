@@ -1,6 +1,6 @@
 # Tab Vault
 
-Save, search, and restore your browser sessions. Tab Vault auto-saves your open tabs, recovers windows you closed by accident, and keeps your tab groups intact. Everything is stored locally in your browser.
+Save, encrypt, search, and restore your browser sessions. Tab Vault auto-saves your open tabs, recovers windows you closed by accident, and keeps your tab groups intact. Everything is stored locally in your browser.
 
 Built as a Manifest V3 Chrome extension with no dependencies and no build step.
 
